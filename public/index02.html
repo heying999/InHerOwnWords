@@ -2,97 +2,63 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>In Her Own Words</title>
-      <style type="text/css">
-      html {
-        width: 100%;
-        height: 100%;
-        /*box-sizing: border-box;*/
-        background: #FFFFFF;
-      }
+  <title>On Her Own Words</title>
 
-  /*.container {
-  width:100%;
-  height:100%;
-  text-align: center;
-  font-family:sans-serif;
-  font-weight: lighter;
-  text-shadow: 0 0 15px #fff;
-  font-size: 2.5em;
-  background-color: #FFFFFF;
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
+  <style type="text/css">
+  html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+  }
 
-  -webkit-transition: width 0.5s;
-  -webkit-animation: loading 3s ease-out infinite;
-}
-.verticalWrap {
-  *position: relative;
-  *top: 50%;
-}
-.vertical {
-  *position: relative;
-  *top: -50%;
-  *left: -50%;
-}*/
+  body {
+    width: 100%;
+    height: 100%;
+  }
 
-      body {
-        width: 100%;
-        height: 100%;
-      }
+  p {
+    position:relative;
+    top:23%;
+    text-align: center;
+    font-family:sans-serif;
+    font-weight: lighter;
+    color: #000000;
+    text-shadow: 0 0 15px #fff;
+    font-size: 3em;
+    -webkit-transition: width 0.5s;
+    -webkit-animation: loading 19s ease-out infinite;
+  }
 
-      p.words {
-        position:relative;
-        top:29%;
-        text-align: center;
-        font-family:sans-serif;
-        font-weight: lighter;
-        color: #000000;
-        text-shadow: 0 0 15px #fff;
-        font-size: 2.5em;
-        -webkit-transition: width 0.5s;
-        -webkit-animation: loading 3s ease-out infinite;
-      }
+  @-webkit-keyframes loading{
+    0%{
+      opacity: 0.3;
+    }
 
-      @-webkit-keyframes loading{
-        0%{
-          opacity: 0.3;
-        }
+    50% {
+    opacity: 1;
+    }
 
-        50% {
-        opacity: 1;
-        }
+    100%{
+      opacity: 0.3;
+    }
+  }
 
-        100%{
-          opacity: 0.3;
-        }
-      }
-
-      </style>
-
+  </style>
 
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.min.js"></script>
+<script type = "text/javascript" src="sketch.js"></script>
+  <body>
 
-<body>
-  <!-- <div class="container">
-      <div class="verticalWrap">
-      <p class="vertical">You will find yourself
+      <p id="breath" onmousedown="countStart()" onmouseup="countEnd()">You will find yourself
         <br />wearing the ill-fitting clothes of
         <br />someone else's world...
         <br />
         <br />dining on the srange food of
         <br />someone else's thought.
       </p>
-      </div>
-    </div> -->
-    <p class="words">You will find yourself
-      <br />wearing the ill-fitting clothes of
-      <br />someone else's world...
-      <br />
-      <br />dining on the srange food of
-      <br />someone else's thought.
-    </p>
 
-</body>
+  </body>
 </html>
